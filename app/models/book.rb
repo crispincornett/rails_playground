@@ -12,6 +12,7 @@
 #  index_books_on_deleted_at  (deleted_at)
 #
 
+# AR model for books
 class Book < ActiveRecord::Base
   acts_as_paranoid
 

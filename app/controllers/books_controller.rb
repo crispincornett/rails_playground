@@ -1,3 +1,4 @@
+# CRUD interface to Book
 class BooksController < ApplicationController
   def index
     @books = Book.all

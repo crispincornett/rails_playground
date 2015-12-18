@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'dotenv-rails', :groups => [:development, :test]
+gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'rails', '4.2.5'
 gem 'pg', '~> 0.15'
@@ -23,7 +23,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Call 'byebug' anywhere in the code to stop execution and get a console
   gem 'byebug'
 
   # Better command line
@@ -40,26 +40,24 @@ group :development, :test do
   gem 'ffaker', '~> 2.1'
 
   # Code quality
-  # gem 'rubocop', '~> 0.35.1', require: false
+  gem 'rubocop', '~> 0.35.1', require: false
   # gem 'coveralls', '~> 0.8.10', require: false
   # gem 'simplecov', '~> 0.11.1', require: false
   # gem 'flog', require: false
   # gem 'flay', require: false
   # gem 'bundler-audit', require: false
-
-
-
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development by keeping your application running in
+  # the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
   # Security scanner
-  gem 'brakeman', :require => false
+  gem 'brakeman', require: false
 
   # Document models
   gem 'annotate', '~> 2.6', '>= 2.6.10'
@@ -86,7 +84,6 @@ group :test do
   # gem 'email_spec', '~> 1.6'
   # gem 'test_after_commit', '~> 0.4.2'
 end
-
 
 # Responders respond_to and respond_with
 # gem 'responders', '~> 2.0'

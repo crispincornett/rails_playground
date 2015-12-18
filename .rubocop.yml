@@ -1,0 +1,6 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'lib/tasks/auto_annotate_models.rake'
