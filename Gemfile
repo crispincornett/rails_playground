@@ -155,3 +155,9 @@ gem 'paranoia', '~> 2.1', '>= 2.1.4'
 
 # Static pages
 gem 'high_voltage', '~> 2.4'
+
+# Model audit
+# gem 'paper_trail', '~> 4.0', '>= 4.0.1'
+
+# Friendly urls
+# gem 'friendly_id', '~> 5.1'

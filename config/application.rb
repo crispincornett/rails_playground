@@ -31,5 +31,12 @@ module Playground
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Generate uuid primary keys by default
+    # http://blog.mccartie.com/2015/10/20/default-uuid's-in-rails.html
+    config.generators do |g|
+      g.orm :active_record, primary_key_type: :uuid
+    end
+
   end
 end

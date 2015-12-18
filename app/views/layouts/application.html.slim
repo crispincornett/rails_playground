@@ -27,7 +27,8 @@ html lang="en"
 
     main[role="main"]
       == render 'layouts/messages'
-      == yield
+      .container
+        == yield
 
     /! JavaScripts
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
