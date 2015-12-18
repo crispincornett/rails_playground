@@ -1,0 +1,33 @@
+doctype html
+html lang="en"
+  head
+    /! Force latest IE rendering engine & Chrome Frame.
+    meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"
+
+    /! Encoding
+    meta charset="utf-8"
+
+    /! Viewport
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+    /! Identity
+    title Rails Playground
+    meta name="description" content="Demonstrate and experiment with Rails"
+    meta name="author" content="Crispin Cornett"
+
+    /! Security
+    = csrf_meta_tags
+
+    /! Stylesheets
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+
+  body
+    header
+      == render 'layouts/navigation'
+
+    main[role="main"]
+      == render 'layouts/messages'
+      == yield
+
+    /! JavaScripts
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
