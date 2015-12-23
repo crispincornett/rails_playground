@@ -45,12 +45,15 @@ group :development, :test do
   # gem 'simplecov', '~> 0.11.1', require: false
   # gem 'flog', require: false
   # gem 'flay', require: false
-  # gem 'bundler-audit', require: false
+  gem 'bundler-audit', require: false
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+
+  # Interact w/ Database from app
+  gem 'rails_db', '~> 1.0'
 
   # Spring speeds up development by keeping your application running in
   # the background. Read more: https://github.com/rails/spring
@@ -86,7 +89,7 @@ group :test do
 end
 
 # Responders respond_to and respond_with
-# gem 'responders', '~> 2.0'
+gem 'responders', '~> 2.1', '>= 2.1.1'
 
 # Default values for AR models
 # gem 'default_value_for', '~> 3.0.0'
@@ -111,7 +114,7 @@ gem 'slim-rails', '~> 3.0', '>= 3.0.1'
 # gem 'dropzonejs-rails', '~> 0.7.1'
 
 # Seed data
-# gem 'seed-fu', '~> 2.3', '>= 2.3.5'
+gem 'seed-fu', '~> 2.3', '>= 2.3.5'
 
 # Issue tags
 # gem 'acts-as-taggable-on', '~> 3.5'
@@ -158,3 +161,6 @@ gem 'high_voltage', '~> 2.4'
 
 # Friendly urls
 # gem 'friendly_id', '~> 5.1'
+
+# Forms
+gem 'simple_form', '~> 3.2', '>= 3.2.1'

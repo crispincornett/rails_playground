@@ -1,0 +1,10 @@
+= simple_form_for(@book, html: { class: 'form-horizontal' }) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :description
+
+  .form-actions
+    = link_to 'Cancel', books_path, class: 'btn'
+    = f.button :submit
