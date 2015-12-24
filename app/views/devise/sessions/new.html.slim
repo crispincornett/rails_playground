@@ -1,0 +1,24 @@
+.col-lg-8.col-lg-offset-2
+  .well
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name),
+      html: { class: 'form-horizontal'}, wrapper: :horizontal_form) do |f|
+
+      h2 Log In
+      = f.error_notification
+      hr
+
+      .form-inputs
+        = f.input :email, required: false, autofocus: true
+        = f.input :password, required: false
+        = f.input :remember_me, wrapper: :horizontal_boolean,
+          as: :boolean if devise_mapping.rememberable?
+
+      .form-actions
+        .col-sm-3
+        = f.button :submit, "Log In", class: 'btn btn-success'
+
+    hr
+
+    .row
+      .col-sm-9.col-sm-offset-3
+        = render "devise/shared/links"

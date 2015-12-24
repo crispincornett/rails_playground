@@ -1,5 +1,5 @@
 nav.navbar.navbar-default.navbar-fixed-top
-  .container
+  .container-fluid
     .navbar-header
       button.navbar-toggle[type="button" data-toggle="collapse" data-target=".navbar-collapse"]
         span.sr-only Toggle navigation
@@ -10,3 +10,11 @@ nav.navbar.navbar-default.navbar-fixed-top
     .collapse.navbar-collapse
       ul.nav.navbar-nav
         == render 'layouts/navigation_links'
+      ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          == render 'layouts/user_links'
+        - else
+          li class=("#{'active' if current_page?(new_user_registration_path)}")
+            = link_to "Sign Up", new_user_registration_path
+          li class=("#{'active' if current_page?(new_user_session_path)}")
+            = link_to "Log In", new_user_session_path

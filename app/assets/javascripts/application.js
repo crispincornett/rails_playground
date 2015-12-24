@@ -17,5 +17,5 @@
 //= require bootstrap-sprockets
 //= require nprogress
 //= require nprogress-turbolinks
-//= reqiore nprogress-ajax
+//= require nprogress-ajax
 //= require_tree .

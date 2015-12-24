@@ -52,6 +52,12 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
+  # Guard config
+  gem 'guard', '~> 2.13'
+  # gem 'terminal-notifier-guard', '~> 1.6', '>= 1.6.4'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.1'
+  gem 'rack-livereload', '~> 0.3.16'
+
   # Interact w/ Database from app
   gem 'rails_db', '~> 1.0'
 
@@ -69,7 +75,7 @@ group :development do
   gem 'quiet_assets', '~> 1.1'
 
   # Test mailers
-  # gem 'letter_opener', '~> 1.4', '>= 1.4.1'
+  gem 'letter_opener', '~> 1.4', '>= 1.4.1'
 
   # Identify N+1 Queries
   gem 'bullet', '~> 4.14', '>= 4.14.10'
@@ -164,3 +170,9 @@ gem 'high_voltage', '~> 2.4'
 
 # Forms
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
+
+# Authentication
+gem 'devise', '~> 3.5', '>= 3.5.3'
+
+# Authorization
+# gem 'pundit', '~> 1.0', '>= 1.0.1'
