@@ -173,6 +173,7 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
 # Authentication
 gem 'devise', '~> 3.5', '>= 3.5.3'
+# gem 'devise_invitable', '~> 1.5', '>= 1.5.2'
 
 # Authorization
 # gem 'pundit', '~> 1.0', '>= 1.0.1'

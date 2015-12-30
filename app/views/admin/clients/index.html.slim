@@ -1,0 +1,24 @@
+h1 Client Listing
+
+hr
+
+.col-lg-12
+  table.table.table-striped.table-hover
+    thead
+      tr
+        th ID
+        th Short Name
+        th Full Name
+        th # of Users
+        th
+    tbody
+      - @clients.each do |client|
+        tr
+          td= client.id
+          td= client.short_name
+          td= client.full_name
+          td= client.users_count
+          td
+            = link_to "Manage", edit_admin_client_path(client)
+            | &nbsp;|&nbsp;
+            = link_to "Delete", admin_client_path(client), method: :delete, data: { confirm: "Are you sure?"}

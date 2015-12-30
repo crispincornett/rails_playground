@@ -2,7 +2,7 @@
 #
 # Table name: users
 #
-#  id                     :integer          not null, primary key
+#  id                     :uuid             not null, primary key
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
 #  reset_password_token   :string
@@ -22,13 +22,20 @@
 #  locked_at              :datetime
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  client_id              :uuid
+#  super_admin            :boolean          default(FALSE), not null
 #
 # Indexes
 #
+#  index_users_on_client_id             (client_id)
 #  index_users_on_confirmation_token    (confirmation_token) UNIQUE
 #  index_users_on_email                 (email) UNIQUE
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #  index_users_on_unlock_token          (unlock_token) UNIQUE
+#
+# Foreign Keys
+#
+#  fk_rails_d3559eaf4c  (client_id => clients.id)
 #
 
 class User < ActiveRecord::Base
@@ -36,4 +43,6 @@ class User < ActiveRecord::Base
   # :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
           :trackable, :validatable, :confirmable, :lockable
+
+  belongs_to :client, counter_cache: true
 end
