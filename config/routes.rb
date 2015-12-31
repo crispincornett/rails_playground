@@ -2,10 +2,16 @@ Rails.application.routes.draw do
   devise_for :users
   root 'welcome#index'
 
-  resources :books
-
   namespace :admin do
     resources :clients
+  end
+
+  namespace :culture do
+    resources :books
+  end
+
+  namespace :contacts do
+    resources :people
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

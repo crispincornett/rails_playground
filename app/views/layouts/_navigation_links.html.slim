@@ -2,8 +2,9 @@
   - if current_user.super_admin?
     == render "layouts/super_admin_links"
 
-  li class="#{'active' if params[:controller] == 'books' }"
-    = link_to 'Books', books_path
+  == render "layouts/culture_links"
+
+  == render "layouts/contact_links"
 
 li class=("#{'active' if current_page?(page_path('about'))}")
   = link_to 'About', page_path('about')

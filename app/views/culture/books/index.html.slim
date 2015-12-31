@@ -13,9 +13,9 @@ table.table
       tr
         td = book.title
         td = link_to 'Show', book
-        td = link_to 'Edit', edit_book_path(book)
+        td = link_to 'Edit', edit_culture_book_path(book)
         td = link_to 'Destroy', book, data: {confirm: 'Are you sure?'}, :method => :delete
 
 br
 
-= link_to 'New Book', new_book_path, class: 'btn btn-primary'
+= link_to 'New Book', new_culture_book_path, class: 'btn btn-primary'

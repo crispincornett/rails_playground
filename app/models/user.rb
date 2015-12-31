@@ -45,4 +45,7 @@ class User < ActiveRecord::Base
           :trackable, :validatable, :confirmable, :lockable
 
   belongs_to :client, counter_cache: true
+
+  has_many :contacts_people, class_name: 'Contacts::Person'
+  has_many :books, class_name: 'Culture::Book'
 end

@@ -1,0 +1,8 @@
+p#notice = notice
+
+h2= "#{@person.first_name} #{@person.last_name}"
+
+p= @person.email
+
+= link_to 'Edit', edit_contacts_person_path(@person), class: 'btn btn-danger'
+= link_to 'Back', contacts_people_path, class: 'btn'
