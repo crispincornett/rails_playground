@@ -12,4 +12,6 @@
 
 class Client < ActiveRecord::Base
   has_many :users
+
+  validates :short_name, :full_name, presence: true
 end

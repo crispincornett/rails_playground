@@ -31,13 +31,13 @@ group :development, :test do
 
   # RSpec & Testing
   # gem 'fuubar', '~> 2.0'
-  # gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
-  # gem 'factory_girl_rails', '~> 4.5'
-  # gem 'rspec-rails', '~> 3.4'
+  gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'rspec-rails', '~> 3.4'
   # gem 'spring-commands-rspec', '~> 1.0', '>= 1.0.4'
+  gem 'capybara', '~> 2.5'
 
   # Generate fake data
-  gem 'ffaker', '~> 2.1'
+  gem 'faker', '~> 1.6', '>= 1.6.1'
 
   # Code quality
   gem 'rubocop', '~> 0.35.1', require: false
@@ -59,7 +59,7 @@ group :development do
   gem 'rack-livereload', '~> 0.3.16'
 
   # Interact w/ Database from app
-  gem 'rails_db', '~> 1.0'
+  gem 'rails_db', '~> 1.1'
 
   # Spring speeds up development by keeping your application running in
   # the background. Read more: https://github.com/rails/spring
@@ -89,7 +89,8 @@ group :development do
 end
 
 group :test do
-  # gem 'shoulda-matchers', '~> 3.0', '>= 3.0.1'
+  gem 'shoulda-matchers', '~> 3.1', require: false
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
   # gem 'email_spec', '~> 1.6'
   # gem 'test_after_commit', '~> 0.4.2'
 end

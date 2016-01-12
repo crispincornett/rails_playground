@@ -24,5 +24,5 @@ class Culture::Book < ActiveRecord::Base
 
   belongs_to :user
 
-  validates :title, presence: true
+  validates :title, :user_id, presence: true
 end

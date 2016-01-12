@@ -21,4 +21,14 @@
 
 class Contacts::Person < ActiveRecord::Base
   belongs_to :user
+
+  validates :user_id, presence: true
+
+  validate :has_significant_attribute
+
+  def has_significant_attribute
+    if first_name.blank? && last_name.blank? && email.blank?
+      errors[:base] << "Contact must have a first name, last name OR email"
+    end
+  end
 end
