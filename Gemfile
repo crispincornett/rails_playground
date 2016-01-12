@@ -91,6 +91,7 @@ end
 group :test do
   gem 'shoulda-matchers', '~> 3.1', require: false
   gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
+  gem 'simplecov', :require => false
   # gem 'email_spec', '~> 1.6'
   # gem 'test_after_commit', '~> 0.4.2'
 end
