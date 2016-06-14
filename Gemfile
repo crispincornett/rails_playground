@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
-gem 'rails', '4.2.5'
-gem 'pg', '~> 0.15'
+gem 'rails', '4.2.6'
+gem 'pg', '~> 0.18.4'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -30,10 +30,10 @@ group :development, :test do
   gem 'pry-rails'
 
   # RSpec & Testing
-  # gem 'fuubar', '~> 2.0'
+  gem 'fuubar', '~> 2.0.0'
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'rspec-rails', '~> 3.4'
-  # gem 'spring-commands-rspec', '~> 1.0', '>= 1.0.4'
+  gem 'spring-commands-rspec', '~> 1.0', '>= 1.0.4'
   gem 'capybara', '~> 2.5'
 
   # Generate fake data
@@ -41,10 +41,8 @@ group :development, :test do
 
   # Code quality
   gem 'rubocop', '~> 0.35.1', require: false
-  # gem 'coveralls', '~> 0.8.10', require: false
-  # gem 'simplecov', '~> 0.11.1', require: false
-  # gem 'flog', require: false
-  # gem 'flay', require: false
+  gem 'flog', require: false
+  gem 'flay', require: false
   gem 'bundler-audit', require: false
 end
 
@@ -54,7 +52,7 @@ group :development do
 
   # Guard config
   gem 'guard', '~> 2.13'
-  # gem 'terminal-notifier-guard', '~> 1.6', '>= 1.6.4'
+  gem 'terminal-notifier-guard', '~> 1.6', '>= 1.6.4'
   gem 'guard-livereload', '~> 2.5', '>= 2.5.1'
   gem 'rack-livereload', '~> 0.3.16'
 
@@ -84,8 +82,8 @@ group :development do
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
   gem 'binding_of_caller', '~> 0.7.2'
 
-  # Use Thin not Webrick
-  gem 'thin', '~> 1.6', '>= 1.6.4'
+  # Use Puma not Webrick
+  gem 'puma', '~> 3.4'
 end
 
 group :test do
@@ -131,7 +129,6 @@ gem 'seed-fu', '~> 2.3', '>= 2.3.5'
 # gem 'sinatra', '~> 1.4.4', require: nil
 # gem 'sidekiq', '~> 4.0'
 # gem 'sidekiq-cron', '~> 0.4.0'
-# gem 'redis-namespace'
 
 # Cache
 # gem 'redis-rails', '~> 4.0'
@@ -179,3 +176,6 @@ gem 'devise', '~> 3.5', '>= 3.5.3'
 
 # Authorization
 # gem 'pundit', '~> 1.0', '>= 1.0.1'
+
+# PDF Generation
+gem 'wicked_pdf'

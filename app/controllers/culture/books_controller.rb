@@ -6,11 +6,34 @@ module Culture
 
     def index
       @books = current_user.books.order(:title)
-      respond_with @books
+
+      respond_to do |format|
+        format.pdf do
+          render pdf: 'books.pdf',
+            disposition: 'inline',
+            template: 'culture/books/index.pdf.erb',
+            layout: 'pdf_layout.html',
+            footer: {
+              html: {
+                template: 'shared/footer'
+              }
+            }
+        end
+      end
     end
 
     def show
-      respond_with @book
+      # respond_with @book
+      respond_to do |format|
+        format.html
+        format.json
+        format.pdf do
+          render pdf: 'book.pdf',
+            disposition: 'inline',
+            template: 'culture/books/show.pdf.erb',
+            layout: 'pdf_layout.html'
+        end
+      end
     end
 
     def new
