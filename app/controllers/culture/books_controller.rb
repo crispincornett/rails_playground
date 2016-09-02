@@ -8,6 +8,8 @@ module Culture
       @books = current_user.books.order(:title)
 
       respond_to do |format|
+        format.html
+        format.json
         format.pdf do
           render pdf: 'books.pdf',
             disposition: 'inline',

@@ -11,6 +11,8 @@
 #
 
 class Client < ActiveRecord::Base
+  has_paper_trail
+
   has_many :users
 
   validates :short_name, :full_name, presence: true

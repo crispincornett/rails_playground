@@ -20,6 +20,7 @@
 #
 
 class Contacts::Person < ActiveRecord::Base
+  has_paper_trail meta: { user_id: :user_id }
   belongs_to :user
 
   validates :user_id, presence: true

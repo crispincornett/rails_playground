@@ -4,5 +4,14 @@ h2= @book.title
 
 p= @book.description
 
+- if @book.custom_fields.present?
+  .custom-fields.well
+    h4 Custom Fields
+    dl
+      - @book.custom_fields.sort.each do |cf|
+        dt= cf[0].titleize
+        dd= cf[1]
+
+
 = link_to 'Edit', edit_culture_book_path(@book), class: 'btn btn-danger'
 = link_to 'Back', culture_books_path, class: 'btn'
